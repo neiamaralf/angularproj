@@ -1,0 +1,79 @@
+<div class="row ">
+
+  <div class="col-lg-12">
+    <div class="col-lg-4 center">
+        <button class="btn btn-lg shadows-h2 scale-fade" ng-click="vm.loadStorage()">
+          Carregar Itens Salvos
+        </button>
+    </div>
+    <div class="col-lg-4 center">
+      <button class="btn btn-lg shadows-h2 scale-fade" ng-click="vm.clearStorage()">
+        Limpar Storage
+      </button>
+    </div>
+  </div>
+
+  <div class="col-lg-12 center-block center">
+    <h1 class="scale-fade-in">
+      Quem vai fazer café agora?</h1>
+  </div>
+
+  <div class="row center-block scale-fade">
+    <div class="col-lg-12 center-block scale-fade-in">
+      <form name="raffleForm" ng-submit="vm.addName(raffleForm)" novalidate>
+        <input required type="text" ng-model="vm.person.name" class="form-control nome" placeholder="Digite o nome...">
+      </form>
+    </div>
+  </div>
+
+  <div ng-show="vm.showSpinner" class="row spinner large">
+    <div class="spinner-container container1">
+      <div class="circle1"></div>
+      <div class="circle2"></div>
+      <div class="circle3"></div>
+      <div class="circle4"></div>
+    </div>
+    <div class="spinner-container container2">
+      <div class="circle1"></div>
+      <div class="circle2"></div>
+      <div class="circle3"></div>
+      <div class="circle4"></div>
+
+    </div>
+    <div class="spinner-container container3">
+      <div class="circle1"></div>
+      <div class="circle2"></div>
+      <div class="circle3"></div>
+      <div class="circle4"></div>
+    </div>
+  </div>
+
+  <div class="row center">
+    <h2 ng-show="vm.showSpinner" class="shadows-h2 scale-fade">
+      <span data-ng-bind="vm.transientPerson.name"></span>
+    </h2>
+
+    <h2 ng-show="vm.hasResult" class="shadows-h2 scale-fade center-block">
+      E o sorteado é:
+      <span class="" data-ng-bind="vm.result.name"></span>
+    </h2>
+
+    <div ng-show="vm.hasResult" class="row center">
+      <button class="btn btn-lg shadows-h2 scale-fade" ng-click="vm.repeat()">
+        Repetir
+      </button>
+    </div>
+  </div>
+
+  <div class="row center hovered">
+    <h2 class="shadows-h2 scale-fade" ng-click="vm.remove(person, $index)" ng-repeat="person in vm.persons track by $index">
+      <span ng-bind-html="person.name"></span>
+    </h2>
+  </div>
+
+  <div class="row center" ng-hide="vm.showSpinner || vm.hasResult">
+    <button ng-disabled="!vm.showExecuteButton" class="btn btn-lg shadows-h2 scale-fade" ng-click="vm.executeRaffle()">
+      SORTEAR
+    </button>
+  </div>
+</div>

@@ -1,0 +1,95 @@
+<div class="container">
+
+
+  <!-- <leaflet id="area-manage-map" lf-center="vm.point"  height="400px" width="100%"></leaflet> -->
+
+
+<uib-pagination  total-items="100" ng-model="vm.page" items-per-page="20" previous-text="anterior" next-text="proximo"></uib-pagination>
+  <!-- <div class="container">
+    <input type="text" class="form-control input input-sm"
+        ng-model="main.search"
+        >
+      <button type="button" class="btn btn-sm btn-success" ng-click="main.query()" name="button">BUSCAR</button>
+  </div>
+
+  <div class="list-group">
+    <div class="list-group-item" ng-repeat="street in main.repository">
+        Rua :  <span ng-bind="street.logradouro"></span> -
+        <span ng-bind="street.cep"></span>
+        <a ui-sref="details({cep:street.cep})">Detalhes</a>
+        <button ng-click="main.navigateDetails(street, $index)">Detalhes</a>
+    </div>
+  </div> -->
+  <!-- <div class="jumbotron text-center">
+    <h1>Opa</h1>
+    <p class="animated infinite" ng-class="main.classAnimation">
+      <button type="button" class="btn btn-lg btn-success" ng-click="main.showToastr()">Splendid Toastr</button>
+    </p>
+
+  </div> -->
+
+  <!-- <div class="container">
+      <p ng-repeat="number in main.numbers"
+
+      >{{$index}}</p>
+
+      <span>NG-IF</span>
+
+      <p ng-repeat="number in main.numbers"
+        ng-if="number % 2 !== 1"
+      >{{number}}</p>
+  </div> -->
+
+  <!-- <div class="row">
+
+    <h1>Filtros customizados</h1>
+
+    <p>CEP: {{main.user.zipcode | cep}}</p>
+    <p>Telefone: {{main.user.phone | tel}}</p>
+    <p>Placa: {{main.user.carPlate | carPlate}}</p>
+
+
+<hr> -->
+
+
+<!-- <p ng-bind="main.timestamp.toDate() | date:'dd/MM/yyyy HH:mm'"></h1>
+    <p>
+
+      Date formatado: {{main.timestamp.toDate() | date:'dd/MM/yyyy HH:mm'}}
+      <br>
+      Date padrão: {{main.timestamp.toDate() | date}}
+      <br>
+      Date short: {{main.timestamp.toDate() | date: 'short'}}
+      <br>
+      Date medium: {{main.timestamp.toDate() | date: 'medium'}}
+      <br>
+      Date long: {{main.timestamp.toDate() | date: 'fullDate'}}
+      <br>
+      Upper: {{main.user.name | uppercase}}
+      <br>
+      Lower: {{main.user.name | lowercase}}
+      <br>
+      Currency: {{main.user.value | currency}}
+      <br>
+      Currency R$: {{main.user.value | currency:'R$ '}}
+      <br>
+
+    </p> -->
+
+    <!-- <div class="col-sm-6 col-md-4" ng-repeat="awesomeThing in main.awesomeThings | orderBy:'rank'"> -->
+    <!-- <div class="col-sm-12 col-md-12" >
+      <div class="thumbnail center-block">
+        <img class="pull-right" ng-src="assets/images/{{ awesomeThing.logo }}" alt="{{ awesomeThing.title }}">
+        <div class="caption">
+          <h3 ng-bind="main.awesomeThing.title"></h3>
+          <p ng-bind="main.awesomeThing.description"></p>
+          <p><a ng-href="{{main.awesomeThing.url}}">{{ main.awesomeThing.url }}</a></p>
+
+          <p> {{ main.awesomeThing.title }} </p>
+          <p ng-bind="main.awesomeThing.title"></p>
+        </div>
+      </div>
+    </div> -->
+  </div>
+
+</div>
