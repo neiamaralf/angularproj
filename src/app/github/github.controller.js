@@ -4,7 +4,7 @@
     angular
         .module('explorer')
         .config(routerConfig)
-        .controller('GithubController', GithubController)
+        .controller('GithubController', GithubController);
 
     /** @ngInject */
     function routerConfig($stateProvider, $urlRouterProvider) {
@@ -263,4 +263,4 @@
         };
 
     }
-})()
+})();
